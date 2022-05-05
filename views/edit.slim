@@ -1,0 +1,9 @@
+p = album
+form action="edited" method="POST"
+    input type="text" name="Namn" placeholder="Ändra title"
+    input type="text" name="Genre" placeholder="Ändra Genre"
+    input type="hidden" name="album_id" value="#{album["album_id"]}"
+    input type="submit" value="Uppdatera" 
+    
+    / input type="hidden" name="album_id" value="#{albumid}"
+   

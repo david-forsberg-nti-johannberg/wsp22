@@ -1,0 +1,15 @@
+1. Sida med inlogg + visa alla album
+sida efter inlogg --> visa alla album + lägg till nytt album
+
+För att visa album, ändra DB.
+
+get('/albums') do
+  db = SQLite3::Database.new("db/slutprojekt_2022.db")
+  db.results_as_hash = true
+  result = db.execute("SELECT * FROM Albums")
+  p result
+  slim,locals:{albums:result})
+
+
+
+end

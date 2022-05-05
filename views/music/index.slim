@@ -1,0 +1,14 @@
+h1 alla album huhi
+
+ol
+  - albums.each do |album|
+    li 
+      p #{album["title"]}
+      form action="ta_bort" method="POST"
+        input type="submit" value="ta bort din jävel"
+        input type="hidden" name="album_id" value="#{album["album_id"]}" 
+      form action="edit_item" method="GET"
+        input type="submit" value="Uppdatera produkt"
+        input type="hidden" name="album_id" value="#{album["album_id"]}"
+
+a href="http://localhost:4567/albums/new" lägg till album 
